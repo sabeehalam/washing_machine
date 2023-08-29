@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-nano", "id": "nano", "top": 104, "left": -12.66, "attrs": {} },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": -35.88,
+      "left": 72.35,
+      "rotate": 270,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 1.33,
+      "left": 257.66,
+      "rotate": 90,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": 36.26,
+      "left": 259,
+      "rotate": 90,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn2",
+      "top": -37.8,
+      "left": 15.47,
+      "rotate": 270,
+      "attrs": { "color": "red" }
+    }
+  ],
+  "connections": [
+    [ "nano:4", "btn1:2.r", "yellow", [ "v-32.23", "h-14.51", "v-167.41", "h51.38" ] ],
+    [ "nano:2", "led1:A", "blue", [ "v-33.37", "h49.62", "v-0.2", "h56.99", "v-43.9" ] ],
+    [ "led1:C", "nano:GND.2", "black", [ "h-13.99", "v0.57", "h-47.33", "v21.33", "h-17.36" ] ],
+    [ "led2:C", "nano:GND.2", "black", [ "v-3.03", "h-81.36" ] ],
+    [ "btn1:1.l", "nano:GND.2", "black", [ "v20.08", "h22.81" ] ],
+    [ "btn2:1.l", "nano:GND.2", "black", [ "v12.81", "h88.36" ] ],
+    [ "btn2:2.r", "nano:3", "cyan", [ "v-33.6", "h18.7", "v128.75", "h17.77" ] ],
+    [ "led2:A", "nano:5", "green", [ "h-25.67", "v-19.08", "h-94.67" ] ]
+  ],
+  "serialMonitor": { "display": "terminal", "newline": "lf" },
+  "dependencies": {}
+}
